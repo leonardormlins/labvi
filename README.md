@@ -1,2 +1,1 @@
-# labvi
-Laboratório de Desenvolvimento de BD VI - Fatec
+# Laboratório de Desenvolvimento de BD VI - Fatec
