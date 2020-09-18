@@ -3,9 +3,21 @@
  */
 package qmgr;
 
-public class App {
-
+public class App {	
+    
+	private int counterPA = 1;
+	private int counterSC = 1;
+	
+    public String getNewTicket(String sector) {
+    	return "PA1";
+    }
+    
+    public String whoIsTheNext(String sector) {
+    	return "PA1";
+    }
+    
     public static void main(String[] args) {
         
     }
+
 }
