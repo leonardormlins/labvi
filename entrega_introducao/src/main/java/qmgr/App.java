@@ -4,9 +4,6 @@
 package qmgr;
 
 public class App {	
-    
-	private int counterPA = 1;
-	private int counterSC = 1;
 	
     public String getNewTicket(String sector) {
     	return "PA1";
