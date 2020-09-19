@@ -3,14 +3,49 @@
  */
 package qmgr;
 
+import java.util.Arrays;
+import java.util.List;
+import com.google.gson.*;
+
+
 public class App {	
+    
+	private int counterPA = 1;
+	private int counterSC = 1;
+	private List<String> ticketsPA = Arrays.asList("PA0");
+	private List<String> ticketsSC = Arrays.asList("SC0");
+	
+	Gson gsonPA = new Gson();
 	
     public String getNewTicket(String sector) {
-    	return "PA1";
+    	
+    	String newTicket;
+    	if(sector == "PA") {
+    		counterPA += 1;
+    		newTicket = sector.concat(String.valueOf(counterPA));
+    		return newTicket;
+    	} else if(sector == "SC") {
+    		counterSC += 1;
+    		newTicket = sector.concat(String.valueOf(counterSC));
+    		return newTicket;
+    	}
+    	
+    	return "";
     }
     
     public String whoIsTheNext(String sector) {
-    	return "PA1";
+    	
+    	String nextTicket;
+    	
+    	if(sector == "PA") {
+    		nextTicket = ticketsPA.get(counterPA - 1);
+    		return nextTicket;
+    	} else if(sector == "SC") {
+    		nextTicket = ticketsSC.get(counterSC - 1);
+    		return nextTicket;
+    	}
+    	
+    	return "";
     }
     
     public static void main(String[] args) {

@@ -27,8 +27,9 @@ public class AppTest {
     public void testNextCall() {
     	
     	String sector = "PA";
-    	String nextTicket = "PA1";
+    	String nextTicket = "PA0";
     	assertEquals("Valida se o próximo ticket é chamado", nextTicket, classUnderTest.whoIsTheNext(sector));
+    
     }
     
     
